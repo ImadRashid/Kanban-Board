@@ -3,7 +3,6 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:kanban_board/app.dart';
 import 'package:kanban_board/core/enums/env.dart';
-
 import 'package:kanban_board/core/others/logger_customizations/custom_logger.dart';
 import 'package:kanban_board/firebase_options.dart';
 import 'locator.dart';
@@ -21,7 +20,7 @@ Future<void> main() async {
     );
     FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
     await setupLocator(Env.production);
-    runApp(const MyApp(title: 'App Name'));
+    runApp(const MyApp(title: 'K-Board'));
   } catch (e) {
     log.e("$e");
   }
