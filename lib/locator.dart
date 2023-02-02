@@ -18,4 +18,5 @@ setupLocator(Env env) async {
   locator.registerLazySingleton<DatabaseService>(() => DatabaseService());
   locator.registerSingleton<AuthService>(AuthService());
   locator.registerLazySingleton(() => FilePickerService());
+  //Juste testing feature branch
 }
